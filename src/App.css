@@ -33,3 +33,8 @@
 .buttons {
   flex-direction: row;
 }
+
+.noteBtn {
+  margin-left:5px;
+  margin-right:5px;
+}

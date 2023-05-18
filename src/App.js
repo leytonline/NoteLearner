@@ -1,5 +1,7 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 let NOTES = {};
 let r = require.context('./notes', false, /\.png$/);
@@ -26,13 +28,13 @@ function App() {
         <h1>NoteLearner</h1>
         <img src={NOTES[note]} alt="note"/>
         <div>
-          <button id="a" onClick={checkAnswer}>A</button>
-          <button id="b" onClick={checkAnswer}>B</button>
-          <button id="c" onClick={checkAnswer}>C</button>
-          <button id="d" onClick={checkAnswer}>D</button>
-          <button id="e" onClick={checkAnswer}>E</button>
-          <button id="f" onClick={checkAnswer}>F</button>
-          <button id="g" onClick={checkAnswer}>G</button>
+          <Button type="button" className="btn btn-primary noteBtn" id="a" onClick={checkAnswer}>A</Button> 
+          <Button type="button" className="btn btn-primary noteBtn" id="b" onClick={checkAnswer}>B</Button>
+          <Button type="button" className="btn btn-primary noteBtn" id="c" onClick={checkAnswer}>C</Button>
+          <Button type="button" className="btn btn-primary noteBtn" id="d" onClick={checkAnswer}>D</Button>
+          <Button type="button" className="btn btn-primary noteBtn" id="e" onClick={checkAnswer}>E</Button>
+          <Button type="button" className="btn btn-primary noteBtn" id="f" onClick={checkAnswer}>F</Button>
+          <Button type="button" className="btn btn-primary noteBtn" id="g" onClick={checkAnswer}>G</Button>
         </div>
       </header>
     </div>
